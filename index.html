@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Email Linkify</title>
+</head>
+
+
+
+<body>
+
+<div class="wrapper">
+
+	<div class="container">
+		<form>
+			<section>
+				<h2>1. INPUT HTML FILE</h2>
+				<input id="fileupload" type="file" />
+			</section>
+
+			<section>
+				<h2>2. PICK YOUR TOPPINGS (options)</h2>
+
+				<div>
+					<label>Campaign ID (required)</label>
+					<input type="text" name="campaignid" id="campaignid" required>
+				</div>
+
+				<div>
+					<label>Coupon?</label>
+					<input type="text" name="couponcode" id="couponcode">
+				</div>
+
+				<div>
+					<label>Affiliate?</label>
+					<div id="affiliateform">
+						<span>Paste the affiliate URL below, <u><b>without</b></u> the redirect link.</span>
+						<span>E.g. Linkshare:</span>
+						<span>http://click.linksynergy.com/fs-bin/click?id=8*9oyGPgP3Y&subid=&offerid=255443.1&type=10&tmpid=4507&RD_PARM1=</span>
+						<textarea name="affiliatelink" id="affiliatelink"></textarea>
+					</div>
+				</div>
+				<div>
+					<input type="checkbox" name="encode" id="encodecheck">
+					<label>Encode redirect URL? (E.g. for Linkshare, Trade Tracker)</label>
+				</div>
+
+
+			</section>
+
+			<section>
+				<h2>3. <button id="submit">LINKIFY!</button></h2>
+			</section>
+		</form>
+	</div>
+
+	<div class="container">
+		<h2>4. LINKIFIED HTML</h2>
+		<textarea id="outputcontent" type="text" readonly></textarea>
+	</div>
+
+</div>
+	
+</body>
+
+
+
+
+
+<script src="app.js"></script>
+</html>
